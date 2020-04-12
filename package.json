@@ -1,0 +1,27 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "Open source recreations of hackmud scripts.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint scripts",
+    "lint:fix": "eslint scripts --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emumud/scripts.git"
+  },
+  "keywords": [
+    "emumud",
+    "hackmud"
+  ],
+  "author": "Duck Industries",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emumud/scripts/issues"
+  },
+  "homepage": "https://github.com/emumud/scripts#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}
