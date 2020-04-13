@@ -11,7 +11,7 @@ function loadScripts() {
     const stat = fs.statSync(file);
 
     if (stat && stat.isDirectory()) {
-      global.fs.readdirSync(file).forEach((scriptname) => {
+      fs.readdirSync(file).forEach((scriptname) => {
         const script = `${filename}.${scriptname.split('.')[0]}`;
         const filepath = path.resolve(file, scriptname);
 
