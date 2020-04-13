@@ -3,6 +3,6 @@ function (context, args) {
     return 'chats.tell { to:"<username>", msg:"<message (1000/10)>" }';
   }
 
-  let out = chat.tell(args.to, args.msg, context.caller);
+  let out = emumudInternals.chat.tell(args.to, args.msg, context.caller);
   return out === true ? '`2Msg Sent`' : {ok: false, msg: out};
 }

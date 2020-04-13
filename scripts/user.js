@@ -6,9 +6,5 @@ Retired users:  (0 / 5)
 (emumud: you can use any user)`;
   }
 
-  let changed = main.changeUser(args, context.caller);
-
-  if (changed !== false) {
-    return changed;
-  }
+  emumudInternals.runner.native.changeUser(args);
 }

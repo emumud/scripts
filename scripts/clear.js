@@ -1,7 +1,7 @@
 function (context, args) {
   #D('');
 
-  transpiler.native.clear();
+  emumudInternals.runner.native.clear();
 
   return;
 }

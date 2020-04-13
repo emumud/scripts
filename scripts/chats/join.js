@@ -3,6 +3,6 @@ function (context, args) {
     return 'chats.join { channel:"<channel name>", password:"<optional password>" }';
   }
 
-  let out = chat.join(args.channel, args.password, context.caller);
+  let out = emumudInternals.chat.join(args.channel, args.password, context.caller);
   return out === true ? {ok: true} : {ok: false, msg: out};
 }

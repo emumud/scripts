@@ -3,6 +3,6 @@ function (context, args) {
     return 'chats.leave { channel:"<channel name>" }';
   }
 
-  let out = chat.leave(args.channel, context.caller);
+  let out = emumudInternals.chat.leave(args.channel, context.caller);
   return out === true ? {ok: true} : {ok: false, msg: out};
 }
