@@ -1,7 +1,7 @@
-const scriptDir = path.resolve(__dirname, 'scripts');
-
 const fs = require('fs');
 const path = require('path');
+
+const scriptDir = path.resolve(__dirname, 'scripts');
 
 function loadScripts() {
   let scripts = {};
