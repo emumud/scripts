@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/emumud/scripts#readme",
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "eslint": "^6.8.0",
+    "eslint-plugin-emumud": "github:emumud/eslint-plugin-emumud"
   }
 }
