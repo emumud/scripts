@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
+const transpiler = require('transpiler');
+
 const scriptDir = path.resolve(__dirname, 'scripts');
 
 function loadScripts() {
@@ -15,13 +17,17 @@ function loadScripts() {
         const script = `${filename}.${scriptname.split('.')[0]}`;
         const filepath = path.resolve(file, scriptname);
 
-        scripts[script] = {path: filepath, original: fs.readFileSync(filepath)};
+        const original = fs.readFileSync(filepath);
+
+        scripts[script] = {path: filepath, original, transpiled: transpiler.transpileScript(original).transpiled};
       });
     } else {
       if (filename[0] !== '.') {
         const script = filename.split('.')[0];
 
-        scripts[script] = {path: file, original: fs.readFileSync(file)};
+        const original = fs.readFileSync(file);
+
+        scripts[script] = {path: file, original, transpiled: transpiler.transpileScript(original).transpiled};
       }
     }
   });
